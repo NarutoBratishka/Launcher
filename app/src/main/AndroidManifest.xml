@@ -10,11 +10,17 @@
         android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/Theme.Launcher">
-        <activity android:name=".ErrorActivity"></activity>
-        <activity android:name=".AutorizationActivity" />
+        <activity
+            android:name=".ErrorActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity
+            android:name=".AutorizationActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
         <activity
             android:name=".LoadingScreenActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:configChanges="orientation|screenSize"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

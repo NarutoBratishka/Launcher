@@ -1,5 +1,6 @@
 package com.mentalscapes
 
+import android.content.Intent
 import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -20,6 +21,7 @@ class AutorizationActivity : AppCompatActivity() {
     }
 
     fun logIn(v: View) {
-
+        intent = Intent(this, ErrorActivity::class.java)
+        startActivity(intent)
     }
 }

@@ -19,7 +19,7 @@ class ErrorActivity : AppCompatActivity() {
                 View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
     }
 
-    fun goBack() {
+    fun goBack(v: View) {
         finish()
     }
 }

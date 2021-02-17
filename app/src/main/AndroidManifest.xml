@@ -12,7 +12,11 @@
         android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/Theme.Launcher">
-        <activity android:name=".GameFrameActivity"></activity>
+        <activity
+            android:name=".GameFrameActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"
+        />
         <activity
             android:name=".ErrorActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

@@ -8,7 +8,7 @@ import android.view.View
 class GameFrameActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_error)
+        setContentView(R.layout.activity_game_frame)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
         supportActionBar?.hide()
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LOW_PROFILE or

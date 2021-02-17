@@ -1,5 +1,6 @@
 package com.mentalscapes
 
+import android.content.Intent
 import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -20,6 +21,8 @@ class ErrorActivity : AppCompatActivity() {
     }
 
     fun goBack(v: View) {
+        val intent = Intent(this, AutorizationActivity::class.java)
+        startActivity(intent)
         finish()
     }
 }

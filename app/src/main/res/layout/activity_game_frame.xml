@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameFrameActivity">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/in_game_background"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/game_left_panel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/left_panel_pic"
+
+        app:layout_constraintDimensionRatio="1:2.72"
+        app:layout_constraintHeight_percent="0.683"
+        app:layout_constraintVertical_bias="0.34"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/game_right_panel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/right_panel_pic"
+
+        app:layout_constraintDimensionRatio="1:1.82"
+        app:layout_constraintHeight_percent="0.7813"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/button_settings_round"
+
+        app:layout_constraintHeight_percent="0.107"
+        app:layout_constraintVertical_bias="0.967"
+        app:layout_constraintDimensionRatio="1:1"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/game_left_panel"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="goBack"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="30dp" android:layout_marginStart="30dp"
+        android:layout_marginRight="32dp" android:layout_marginEnd="32dp"
+        android:background="@drawable/boarder_rectangle_frame"
+
+        app:layout_constraintHeight_percent="0.8693"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/game_left_panel"
+        app:layout_constraintRight_toLeftOf="@id/game_right_panel"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/target_green"
+            android:scaleType="fitXY"
+
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintHeight_percent="0.414"
+
+            app:layout_constraintVertical_bias="0.743"
+            app:layout_constraintHorizontal_bias="0.29"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/target_red"
+            android:scaleType="fitXY"
+
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintHeight_percent="0.291"
+
+            app:layout_constraintVertical_bias="0.169"
+            app:layout_constraintHorizontal_bias="0.781"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,8 +21,6 @@ class ErrorActivity : AppCompatActivity() {
     }
 
     fun goBack(v: View) {
-        val intent = Intent(this, AutorizationActivity::class.java)
-        startActivity(intent)
         finish()
     }
 }

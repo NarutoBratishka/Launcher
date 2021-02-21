@@ -8,19 +8,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoadingScreenActivity">
-<!--    android:background="@drawable/launcher_background_gradient"-->
+    <!--    android:background="@drawable/launcher_background_gradient"-->
 
+
+    <!--ProgressBar-->
 
     <include
         layout="@layout/loading_screen_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
+    <ImageView
+        android:layout_width="486dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
 
-    <!--ProgressBar-->
+        android:src="@drawable/progressbar_empty_shadow"
+        app:layout_constraintDimensionRatio="12.6875:1"
+        app:layout_constraintStart_toStartOf="@id/progress_bar_container"
+        app:layout_constraintTop_toTopOf="@id/progress_bar_container" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/progress_bar_container"
         android:layout_width="480dp"
         android:layout_height="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,23 +43,25 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.92">
 
-
         <ImageView
             android:id="@+id/progress_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/progressbar_empty"
             android:scaleType="fitCenter"
+            android:src="@drawable/progressbar_empty"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:padding="2dp"
-            android:paddingLeft="1dp" android:paddingStart="1dp"
+            android:paddingStart="1dp"
+            android:paddingLeft="1dp"
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -57,31 +72,32 @@
                 android:id="@+id/progress_start"
                 android:layout_width="14dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/green_start"
                 android:scaleType="fitXY"
+                android:src="@drawable/green_start"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/progress_center"
                 android:layout_width="6dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/green_fragment"
                 android:scaleType="fitXY"
+                android:src="@drawable/green_fragment"
 
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/progress_start"
-                app:layout_constraintTop_toTopOf="parent"/>
-<!--            android:foreground="@drawable/bubble"-->
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--            android:foreground="@drawable/bubble"-->
 
             <ImageView
                 android:layout_width="16dp"
                 android:layout_height="14dp"
-                android:src="@drawable/blink"
-                android:scaleType="fitXY"
-                android:layout_marginStart="5dp" android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/blink"
                 app:layout_constraintStart_toStartOf="@id/progress_start"
                 app:layout_constraintTop_toTopOf="@id/progress_start" />
 
@@ -89,8 +105,8 @@
                 android:id="@+id/progress_end"
                 android:layout_width="14dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/green_end"
                 android:scaleType="fitXY"
+                android:src="@drawable/green_end"
 
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/progress_center"
@@ -98,7 +114,7 @@
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-<!--<LinearLayout
+        <!--<LinearLayout
             android:id="@+id/progress_center"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
@@ -137,7 +153,7 @@
             android:scaleType="centerCrop"
             app:layout_constraintVertical_bias="0.42"/>
 -->
-<!--
+        <!--
         <ProgressBar
             android:id="@+id/progressBar5"
             android:layout_height="40dp"
@@ -167,4 +183,11 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="606dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

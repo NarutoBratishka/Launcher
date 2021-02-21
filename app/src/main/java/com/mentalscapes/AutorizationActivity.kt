@@ -30,7 +30,7 @@ class AutorizationActivity : AppCompatActivity() {
 
     fun logIn(v: View) {
 //        Toast.makeText(this, "Логин: ${loginEdit.text}\nПароль: ${passwordEdit.text}", Toast.LENGTH_SHORT).show()
-        intent = Intent(this, GameFrameActivity::class.java)
+        intent = Intent(this, ErrorActivity::class.java)
         startActivity(intent)
     }
 }

@@ -82,7 +82,7 @@ class LoadingScreenActivity : AppCompatActivity() {
 
 
         runOnUiThread(Runnable {
-            intent = Intent(this@LoadingScreenActivity, ErrorActivity::class.java)
+            intent = Intent(this@LoadingScreenActivity, AutorizationActivity::class.java)
             startActivity(intent)
             finish()
         })
